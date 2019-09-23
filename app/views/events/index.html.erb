@@ -5,6 +5,7 @@
     <th>Date</th>
     <th>Location</th>
     <th>Budget</th>
+    <th>Participants</th>
   </tr>
 
   <% @events.each do |event| %>
@@ -12,6 +13,7 @@
       <td><%= event.date %></td>
       <td><%= event.location %></td>
       <td><%= event.budget %></td>
+      <td><%= event.participants %></td>
       <td><%= link_to 'Show', event_path(event) %></td>
       <td><%= link_to 'Edit', edit_event_path(event) %></td>
       <td><%= link_to 'Destroy', event_path(event),

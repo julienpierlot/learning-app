@@ -1,0 +1,50 @@
+<%= form_with scope: :event, url: events_path, local: true do |form| %>
+
+<h1>Create an event</h1>
+
+<h2>Event details</h2>
+  <p>
+    <%= form.label :date %><br>
+    <%= form.date_field :date %>
+  </p>
+
+  <p>
+    <%= form.label :location %><br>
+    <%= form.text_field :location %>
+  </p>
+
+  <p>
+    <%= form.label :budget %><br>
+    <%= form.text_field :budget %>
+  </p>
+
+<h2>List of participants</h2>
+
+  <%= fields_for :participant do |form| %>
+  
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :email %><br>
+    <%= form.email_field :email %>
+  </p>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :email %><br>
+    <%= form.email_field :email %>
+  </p>
+
+  <% end %>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

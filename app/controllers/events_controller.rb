@@ -5,13 +5,11 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new(event_params)
-    @event = Event.participants.build
   end
 
   def create
     @event = Event.new(event_params)
-    @event = Event.participants.build
+    @event.participants.build
     @participant = @event.participants.new(params[:participants])
       if @event.save
         redirect_to @event

@@ -3,4 +3,5 @@
 <p>Date: <%= @event.date %></p>
 <p>Location: <%= @event.location %></p>
 <p>Budget: <%= @event.budget %></p>
+<p>Participants: <%= @event.participants.inspect %></p>
 <%= link_to 'Back', events_path %>

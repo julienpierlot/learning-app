@@ -13,7 +13,7 @@
       <td><%= event.date %></td>
       <td><%= event.location %></td>
       <td><%= event.budget %></td>
-      <td><%= event.participants %></td>
+      <td><%= event.participants.inspect %></td>
       <td><%= link_to 'Show', event_path(event) %></td>
       <td><%= link_to 'Edit', edit_event_path(event) %></td>
       <td><%= link_to 'Destroy', event_path(event),
@@ -26,3 +26,6 @@
   <%= link_to 'New event', new_event_path %>
 
 </table>
+
+
+  <%= link_to 'Back', :back %>

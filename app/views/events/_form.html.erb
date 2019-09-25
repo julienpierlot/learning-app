@@ -1,7 +1,5 @@
 <%= form_with scope: :event, url: events_path, local: true do |form| %>
 
-<h1>Create an event</h1>
-
 <h2>Event details</h2>
 <p>
   <%= form.label :name %><br>
@@ -23,6 +21,7 @@
   </p>
 
 <h2>Add participants</h2>
+    <%= text_area_tag 'email'%>
 
 
   <p>

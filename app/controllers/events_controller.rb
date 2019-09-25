@@ -9,6 +9,13 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+    if params.slice(:email).fetch("email") != ""
+      participants = params.slice(:email).fetch("email").split(',')
+      participants.each do |email|
+        participant = Participant.new(email: email)
+        @event.participants.push(participant)
+      end
+    end
       if @event.save
         redirect_to @event
       else

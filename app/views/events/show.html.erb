@@ -1,7 +1,8 @@
 
 <h1>Event details</h1>
+<p>Name: <%= @event.name %></p>
 <p>Date: <%= @event.date %></p>
 <p>Location: <%= @event.location %></p>
 <p>Budget: <%= @event.budget %></p>
-<p>Participants: <%= @event.participants.inspect %></p>
+<p>Participants: <%= @event.participants.map(&:email) %></p>
 <%= link_to 'Back', events_path %>

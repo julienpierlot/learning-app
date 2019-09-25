@@ -3,6 +3,10 @@
 <h1>Create an event</h1>
 
 <h2>Event details</h2>
+<p>
+  <%= form.label :name %><br>
+  <%= form.text_field :name %>
+</p>
   <p>
     <%= form.label :date %><br>
     <%= form.date_field :date %>
@@ -20,19 +24,6 @@
 
 <h2>Add participants</h2>
 
-  <%= fields_for :participant do |form| %>
-
-  <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </p>
-
-  <p>
-    <%= form.label :email %><br>
-    <%= form.email_field :email %>
-  </p>
-
-  <% end %>
 
   <p>
     <%= form.submit %>

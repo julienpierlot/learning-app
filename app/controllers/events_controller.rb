@@ -9,8 +9,6 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @event.participants.build
-    @participant = @event.participants.new(params[:participants])
       if @event.save
         redirect_to @event
       else
@@ -40,5 +38,5 @@ end
 private
 
   def event_params
-    params.require(:event).permit(:date, :location, :budget, participants_attributes: [:name, :email] )
+    params.require(:event).permit(:name, :date, :location, :budget)
   end

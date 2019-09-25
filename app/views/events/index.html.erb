@@ -10,10 +10,11 @@
 
   <% @events.each do |event| %>
     <tr>
+      <td><%= event.name %></td>
       <td><%= event.date %></td>
       <td><%= event.location %></td>
       <td><%= event.budget %></td>
-      <td><%= event.participants.inspect %></td>
+      <td><%= event.participants.map(&:email) %></td>
       <td><%= link_to 'Show', event_path(event) %></td>
       <td><%= link_to 'Edit', edit_event_path(event) %></td>
       <td><%= link_to 'Destroy', event_path(event),

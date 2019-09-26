@@ -4,5 +4,7 @@
 <p>Date: <%= @event.date %></p>
 <p>Location: <%= @event.location %></p>
 <p>Budget: <%= @event.budget %></p>
-<p>Participants: <%= @event.participants.map(&:email) %></p>
+<% if @event.participants.any?  %>
+  <p>Participants: <%= @event.participants.map(&:email) %></p>
+<% end %>
 <%= link_to 'Back', events_path %>

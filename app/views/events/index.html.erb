@@ -15,7 +15,11 @@
       <td><%= event.date %></td>
       <td><%= event.location %></td>
       <td><%= event.budget %></td>
-      <td><%= event.participants.map(&:email) %></td>
+      <% if event.participants.any?  %>
+        <td><%= event.participants.map(&:email) %></td>
+      <% else %>
+        <td>Aucun participant pour le moment</td>   
+      <% end %>
       <td><%= link_to 'Show', event_path(event) %></td>
       <td><%= link_to 'Edit', edit_event_path(event) %></td>
       <td><%= link_to 'Destroy', event_path(event),

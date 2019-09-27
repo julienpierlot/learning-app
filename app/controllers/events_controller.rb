@@ -14,7 +14,7 @@ class EventsController < ApplicationController
       participants.each do |email|
         participant = Participant.new(email: email)
         @event.participants.push(participant)
-        end
+      end
     end
       if @event.save
         redirect_to @event

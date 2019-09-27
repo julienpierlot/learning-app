@@ -1,10 +1,15 @@
-
 <h1>Event details</h1>
 <p>Name: <%= @event.name %></p>
 <p>Date: <%= @event.date %></p>
 <p>Location: <%= @event.location %></p>
 <p>Budget: <%= @event.budget %></p>
 <% if @event.participants.any?  %>
-  <p>Participants: <%= @event.participants.map(&:email) %></p>
+  <p>Participants:</p>
+  <ul>
+    <% @event.participants.each  do |participant|%>
+      <li>Email: <%= participant.email %> | Receiver: <%= participant.receiver %> </li>
+    <% end %>
+  <ul>
 <% end %>
+
 <%= link_to 'Back', events_path %>

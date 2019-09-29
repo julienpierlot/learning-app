@@ -11,12 +11,19 @@ class Event < ApplicationRecord
   end
 
 
-#à retravailler --> participant doit être créé en même temps et je dois lui assigner un array.
-
-
-  def assign_random_email_to_participant(emails)
-
+  def add_participant(emails)
+    emails.each do |email|
+      receiver = emails.select { |receiver| receiver != email }
+      participant = Participant.new(email: email, receiver: receiver.sample)
+      puts participant
+      participant
+    end
   end
 
 
 end
+
+# emails.each do |email|
+#   participant = Participant.new(email: email)
+#   @event.participants.push(participant)
+# end

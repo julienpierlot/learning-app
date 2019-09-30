@@ -19,12 +19,4 @@ class Event < ApplicationRecord
       self.participants
   end
 
-  def self.cooc
-  end
-
 end
-
-# emails.each do |email|
-#   participant = Participant.new(email: email)
-#   @event.participants.push(participant)
-# end

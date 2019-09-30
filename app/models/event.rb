@@ -14,12 +14,13 @@ class Event < ApplicationRecord
   def add_participant(emails)
     emails.each do |email|
       receiver = emails.select { |receiver| receiver != email }
-      participant = Participant.new(email: email, receiver: receiver.sample)
-      puts participant
-      participant
+      self.participants << Participant.new(email: email, receiver: receiver.sample)
     end
+      self.participants
   end
 
+  def self.cooc
+  end
 
 end
 

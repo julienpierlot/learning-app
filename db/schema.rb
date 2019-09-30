@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20190929145138) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "text"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 20190929145138) do
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
     t.text "body"
-    t.integer "article_id"
+    t.bigint "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_comments_on_article_id"
@@ -42,7 +45,7 @@ ActiveRecord::Schema.define(version: 20190929145138) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "event_id"
+    t.bigint "event_id"
     t.string "receiver"
     t.index ["event_id"], name: "index_participants_on_event_id"
   end
@@ -54,4 +57,6 @@ ActiveRecord::Schema.define(version: 20190929145138) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "comments", "articles"
+  add_foreign_key "participants", "events"
 end

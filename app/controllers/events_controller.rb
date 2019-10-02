@@ -9,10 +9,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    if params[:email].present?
-      emails = params[:email].split( /, */ )
-      _participants = @event.add_participant(emails)
-    end
+    _participants = @event.add_participant(params[:email])
       if @event.save
         redirect_to @event
       else

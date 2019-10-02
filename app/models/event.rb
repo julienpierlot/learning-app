@@ -10,13 +10,16 @@ class Event < ApplicationRecord
     end
   end
 
-
   def add_participant(emails)
+    emails_already_assigned = []
     emails.each do |email|
-      receivers = emails.select { |receiver| receiver != email }
-      receiver = receivers.sample
+      receiver = (emails-emails_already_assigned).select { |receiver| receiver != email }.sample
+      emails_already_assigned << receiver
       self.participants << Participant.new(email: email, receiver: receiver)
     end
+  end
+
+  def self.cooc
   end
 
 end

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learning_app</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches">
+  </head>
+
+  <body>
+
+    <div class="container" id="container">
+
+      <div class="header" id="header">
+        <div class="home-title" id="home-title">
+          <h1>Welcome to my learning app!</h1>
+          <span>Learning to be the best</span>
+        </div>
+        <div class="navigation" id='navigation'>
+          <%= link_to 'My Blog', controller: 'articles' %>
+          <%= link_to 'My Topics', controller: 'topics' %>
+          <%= link_to 'My Events', controller: 'events' %>
+          <a href="#">About Me</a>
+        </div>
+      </div>
+
+        <%= yield %>
+
+      <div class="footer" id="footer">
+        footer
+      </div>
+
+    </div>
+
+  </body>
+</html>

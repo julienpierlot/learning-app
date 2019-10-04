@@ -1,0 +1,44 @@
+
+#home-title {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+#home-title h1 {
+  font: 65px, cursive;
+  margin: 0px;
+}
+
+#home-title h1:after {
+  content: " --- ";
+  display: block;
+  color: #11b29e;
+  line-height: 25px;
+  font-size: 40px;
+}
+
+#home-title span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+#navigation {
+  text-align: center;
+  margin: 40px;
+  font-size: 11px;
+  background-color: white;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+#navigation a{
+  margin: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+#navigation a:hover{
+  color: #11b29e;
+}

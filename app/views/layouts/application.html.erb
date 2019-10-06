@@ -21,7 +21,18 @@
           <h1><a href="/">Welcome to my learning app!</a></h1>
           <span>Learning to be the best</span>
         </div>
+        <div class="mobile-nav" id='mobile-nav'>
+          <a onclick="ShowMenu()">Menu</a>
+        </div>
+          <div class="mobile-links" id="mobile-links">
+            <a href="/">Home</a>
+            <%= link_to 'My Blog', controller: 'articles' %>
+            <%= link_to 'My Topics', controller: 'topics' %>
+            <%= link_to 'My Events', controller: 'events' %>
+            <a href="#">About Me</a>
+          </div>
         <div class="navigation" id='navigation'>
+          <a href="/">Home</a>
           <%= link_to 'My Blog', controller: 'articles' %>
           <%= link_to 'My Topics', controller: 'topics' %>
           <%= link_to 'My Events', controller: 'events' %>

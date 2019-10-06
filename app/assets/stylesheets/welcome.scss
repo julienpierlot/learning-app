@@ -3,32 +3,78 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #main-column{
-  padding: 15px;
+  padding: 45px;
+  float:left;
+  width:710px;
+  border-right: 1px solid #EEEEEE;
+  overflow: hidden;
 }
 
+.article-featured {
+  margin-bottom: 40px;
+}
 
-#main-column span{
+.article-featured a{
+  text-decoration: none;
+  color: #333333;
+}
+
+.article-featured a:hover{
   color: #11b29e;
 }
 
-#main-column img{
-  width: 100%;
+#comment-count{
+  display: inline;
+}
+
+.article-featured span{
+  color: #11b29e;
+  display: block;
+}
+
+.article-featured h3{
+  font-weight: lighter;
+  font-size: 25px;
+}
+.article-featured img{
+  width: 30%;
+  float: left;
+  margin: 25px 15px 15px 0px;
+}
+
+.article-featured p {
+  margin-top: 0px;
+}
+
+#main-column .article--featured .comment-number p span{
+  display: inline;
 }
 
 #sidebar {
-  padding: 15px;
+  padding: 25px;
+  text-align: left;
+  float:left;
+  width:250px;
+  font-size: 15px;
 }
 
 #sidebar div{
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #EEEEEE;
   padding-top: 15px;
   padding-bottom: 15px;
   margin: 0px;
 }
 
+#sidebar .article-sidebar{
+  border: none;
+  padding-bottom: 10px;
+  padding-top: 0px;
+}
+
 #sidebar h2 {
-  font-size: 15px;
-  margin: 0px;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 15px;
   font-family: Staatliches, cursive;
 }
 
@@ -36,21 +82,32 @@
   width: 100%;
 }
 
+#welcome-image {
+  text-align: center;
+}
+
 #welcome-image img{
   border-radius: 50%;
+  width: auto;
+  max-width: 75%;
+  height: auto;
+  max-height: 75%;
 }
 
 #popular-articles img {
   float: left;
   width: 49%;
   padding-right: 10px;
-  margin-top: 10px;
+  max-width: 100px;
+  height: auto;
+  max-height: 100px;
 }
 
 #popular-articles h3 {
   padding-right: 10px;
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 5px;
+  font-size: 15px;
 }
 
 #popular-articles p{

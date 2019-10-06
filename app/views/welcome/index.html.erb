@@ -1,19 +1,23 @@
 
 
 <div class="main-column" id="main-column">
-  <h1>Latest article</h1>
-    <% latest_article = Article.last %>
-    <span><%= latest_article.created_at%></span>
-    <h2><%= latest_article.title%></h2>
-    <p><%= latest_article.text%></p>
-    <%= image_tag "ace.jpeg" %>
-    <p>Comments: <%= latest_article.comments.count%></p>
+  <h2>Latest articles</h2>
+  <% Article.last(3).each do |article|%>
+    <div class="article-featured">
+      <span class="date-featured"><%= article.created_at.strftime("%d %b. %Y")%></span>
+      <%= image_tag "ace.jpeg" %>
+      <h3><%= link_to article.title, article %></h3>
+      <p><%= article.text%></p>
+      <p>Comments: <span class = "comment-count" id="comment-count"><%= article.comments.count%></span></p>
+    </div>
+  <% end %>
+
 </div>
 
 <div class="sidebar" id="sidebar">
 
   <div class="welcome-image" id="welcome-image">
-    <%= image_tag "ace.jpeg" %>
+    <%= image_tag "ace_welcome.jpeg" %>
   </div>
 
   <div class="welcome-text" id="welcome-text">
@@ -31,10 +35,18 @@
 
   <div class="popular-articles" id="popular-articles">
     <h2>Popular articles</h2>
-      <% latest_article = Article.last %>
-      <%= image_tag "ace.jpeg" %>
-      <h3><a href="#"><%= latest_article.title%></a></h3>
-      <p><%= latest_article.text%></p>
+    <% Article.last(3).each do |article|%>
+      <div class="article-sidebar">
+        <%= image_tag "ace.jpeg" %>
+        <h3><%= link_to article.title, article %></h3>
+        <% if article.text.length > 100 %>
+          <p><%= article.text.first(100)+"..."%></p>
+        <% else %>
+          <p><%= article.text%></p>
+        <% end %>
+      </div>
+    <% end %>
   </div>
+
 
 </div>

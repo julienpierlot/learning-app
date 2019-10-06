@@ -18,30 +18,34 @@
 
 body{
   background-image: url(https://www.designerblogs.com/wp-content/uploads/2019/03/gabrielle-2019-v1.png);
-  font-family: "Josephin-Sans", sans-serif;
-  font-size: 14px;
+  font-family: "Josefin Sans", sans-serif, "Open Sans", sans-serif;
+  font-size: 18px;
   background-repeat: no-repeat;
   background-position: top center;
   color: #333333;
+  /* font: 26px 'Josefin Sans', sans-serif; */
+  font-weight: lighter;
 }
 
 #container {
-  width:960px;
+  width:100%;
   margin:20px auto;
-  border: 1px blue solid;
 }
 
-#main-column {
-  float:left;
-  width:620px;
-  border-right: 1px grey solid;
+@media (max-width: 960px) {
+  #container {
+    width: 100%;
+  }
+  #main-column {
+    width: 100%;
+  }
+
+  #sidebar {
+    float: none;
+    width: 100%;
+  }
 }
 
-#sidebar {
-  text-align: left;
-  float:left;
-  width:279px;
-}
 #footer {
   clear:both;
   text-align: center;

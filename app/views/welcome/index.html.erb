@@ -1,9 +1,40 @@
 
 
 <div class="main-column" id="main-column">
-  <h1>Main column content</h1>
+  <h1>Latest article</h1>
+    <% latest_article = Article.last %>
+    <span><%= latest_article.created_at%></span>
+    <h2><%= latest_article.title%></h2>
+    <p><%= latest_article.text%></p>
+    <%= image_tag "ace.jpeg" %>
+    <p>Comments: <%= latest_article.comments.count%></p>
 </div>
 
 <div class="sidebar" id="sidebar">
-  <h1>Sidebar content</h1>
+
+  <div class="welcome-image" id="welcome-image">
+    <%= image_tag "ace.jpeg" %>
+  </div>
+
+  <div class="welcome-text" id="welcome-text">
+    <h2>Welcome!</h2>
+    <p>My name is Julien and my life is all about coding now.</p>
+  </div>
+
+  <div class="search-app" id="search-app">
+    <h2>Search this app</h2>
+    <%= form_with scope: :article, url: articles_path, local: true do |form| %>
+    <%= text_area_tag 'keywords' %>
+    <%= form.submit %>
+    <% end %>
+  </div>
+
+  <div class="popular-articles" id="popular-articles">
+    <h2>Popular articles</h2>
+      <% latest_article = Article.last %>
+      <%= image_tag "ace.jpeg" %>
+      <h3><a href="#"><%= latest_article.title%></a></h3>
+      <p><%= latest_article.text%></p>
+  </div>
+
 </div>

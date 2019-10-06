@@ -14,9 +14,12 @@
  *= require_self
  */
 
+@import _header.scss;
+
 body{
   background-image: url(https://www.designerblogs.com/wp-content/uploads/2019/03/gabrielle-2019-v1.png);
-  font-family: Staatliches, Verdana, sans-serif;
+  font-family: "Josephin-Sans", sans-serif;
+  font-size: 14px;
   background-repeat: no-repeat;
   background-position: top center;
   color: #333333;
@@ -31,17 +34,22 @@ body{
 #main-column {
   float:left;
   width:620px;
-  background-color: yellow;
+  border-right: 1px grey solid;
 }
 
-@import _header.scss;
-
 #sidebar {
+  text-align: left;
   float:left;
-  width:340px;
-  background-color: green;
+  width:279px;
 }
 #footer {
   clear:both;
-  background-color: orange;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 20px;
+}
+
+#name {
+  color: #11b29e;
 }

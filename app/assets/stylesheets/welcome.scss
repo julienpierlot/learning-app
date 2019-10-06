@@ -1,3 +1,67 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main-column{
+  padding: 15px;
+}
+
+
+#main-column span{
+  color: #11b29e;
+}
+
+#main-column img{
+  width: 100%;
+}
+
+#sidebar {
+  padding: 15px;
+}
+
+#sidebar div{
+  border-bottom: 1px solid grey;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0px;
+}
+
+#sidebar h2 {
+  font-size: 15px;
+  margin: 0px;
+  font-family: Staatliches, cursive;
+}
+
+#sidebar img{
+  width: 100%;
+}
+
+#welcome-image img{
+  border-radius: 50%;
+}
+
+#popular-articles img {
+  float: left;
+  width: 49%;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+
+#popular-articles h3 {
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#popular-articles p{
+  margin: 0px;
+}
+
+#popular-articles a {
+  text-decoration: none;
+  color: #11b29e;
+}
+
+#popular-articles a:hover {
+  color: #333333;
+}

@@ -3,47 +3,41 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #main-column{
-  padding: 45px;
+  padding: 3%;
   float:left;
-  width:710px;
+  width:64%;
   border-right: 1px solid #EEEEEE;
   overflow: hidden;
 }
 
 .article-featured {
   margin-bottom: 40px;
-}
-
-.article-featured a{
-  text-decoration: none;
-  color: #333333;
-}
-
-.article-featured a:hover{
-  color: #11b29e;
-}
-
-#comment-count{
-  display: inline;
-}
-
-.article-featured span{
-  color: #11b29e;
-  display: block;
-}
-
-.article-featured h3{
-  font-weight: lighter;
-  font-size: 25px;
-}
-.article-featured img{
-  width: 30%;
-  float: left;
-  margin: 25px 15px 15px 0px;
-}
-
-.article-featured p {
-  margin-top: 0px;
+  a{
+    text-decoration: none;
+    color: #333333;
+  }
+  a:hover{
+    color: #11b29e;
+  }
+  span{
+    color: #11b29e;
+    display: block;
+  }
+  #comment-count{
+    display: inline;
+  }
+  h3{
+    font-weight: lighter;
+    font-size: 25px;
+  }
+  img{
+    width: 30%;
+    float: left;
+    margin: 25px 15px 15px 0px;
+  }
+  p {
+    margin-top: 0px;
+  }
 }
 
 #main-column .article--featured .comment-number p span{
@@ -51,74 +45,88 @@
 }
 
 #sidebar {
-  padding: 25px;
+  padding: 3%;
   text-align: left;
   float:left;
-  width:250px;
+  width:23%;
   font-size: 15px;
+  div{
+    border-bottom: 1px solid #EEEEEE;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0px;
+  }
+  .article-sidebar{
+    border: none;
+    padding-bottom: 10px;
+    padding-top: 0px;
+  }
+  h2 {
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-family: Staatliches, cursive;
+  }
+  img{
+    width: 100%;
+  }
+  #welcome-image {
+    text-align: center;
+    img{
+      border-radius: 50%;
+      width: auto;
+      max-width: 75%;
+      height: auto;
+      max-height: 75%;
+    }
+  }
 }
 
-#sidebar div{
-  border-bottom: 1px solid #EEEEEE;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin: 0px;
+@media (max-width: 768px) {
+  #main-column {
+    width: 94%;
+    padding: 3%;
+  }
+  #sidebar {
+    text-align: center;
+    float: none;
+    width: 94%;
+    padding: 3%;
+    #welcome-image {
+      img{
+        border-radius: 50%;
+        width: auto;
+        max-width: 25%;
+        height: auto;
+        max-height: 25%;
+      }
+    }
+  }
 }
 
-#sidebar .article-sidebar{
-  border: none;
-  padding-bottom: 10px;
-  padding-top: 0px;
-}
-
-#sidebar h2 {
-  font-size: 20px;
-  margin-top: 0px;
-  margin-bottom: 15px;
-  font-family: Staatliches, cursive;
-}
-
-#sidebar img{
-  width: 100%;
-}
-
-#welcome-image {
-  text-align: center;
-}
-
-#welcome-image img{
-  border-radius: 50%;
-  width: auto;
-  max-width: 75%;
-  height: auto;
-  max-height: 75%;
-}
-
-#popular-articles img {
-  float: left;
-  width: 49%;
-  padding-right: 10px;
-  max-width: 100px;
-  height: auto;
-  max-height: 100px;
-}
-
-#popular-articles h3 {
-  padding-right: 10px;
-  margin-top: 0px;
-  margin-bottom: 5px;
-  font-size: 15px;
-}
-
-#popular-articles p{
-  margin: 0px;
-}
-
-#popular-articles a {
-  text-decoration: none;
-  color: #11b29e;
-}
-
-#popular-articles a:hover {
-  color: #333333;
+#popular-articles {
+  img {
+    float: left;
+    width: 49%;
+    padding-right: 10px;
+    max-width: 100px;
+    height: auto;
+    max-height: 100px;
+  }
+  h3 {
+    padding-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  p {
+    margin: 0px;
+  }
+  a {
+    text-decoration: none;
+    color: #11b29e;
+  }
+  a:hover {
+    color: #333333;
+  }
 }

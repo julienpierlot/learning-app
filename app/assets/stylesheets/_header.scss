@@ -1,33 +1,34 @@
+#header {
+  width: 94%;
+  padding: 3%;
+}
 
 #home-title {
   padding-top: 40px;
   padding-bottom: 40px;
   text-align: center;
-}
-#home-title h1 {
-  font: 65px, cursive;
-  margin: 0px;
-  font-family: Staatliches, cursive;
-}
-
-#home-title h1 a {
-  text-decoration: none;
-  color: #333333;
-  font-size: 50px;
-}
-
-#home-title h1:after {
-  content: " --- ";
-  display: block;
-  color: #11b29e;
-  line-height: 25px;
-  font-size: 40px;
-}
-
-#home-title span {
-  display: block;
-  text-transform: uppercase;
-  font-size: 10px;
+  h1 {
+    font: 65px, cursive;
+    margin: 0px;
+    font-family: Staatliches, cursive;
+  }
+    a {
+      text-decoration: none;
+      color: #333333;
+      font-size: 50px;
+    }
+  h1:after {
+    content: " --- ";
+    display: block;
+    color: #11b29e;
+    line-height: 25px;
+    font-size: 40px;
+  }
+  span {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
 }
 
 #mobile-nav {
@@ -38,47 +39,59 @@
   line-height: 25px;
   letter-spacing: 1px;
   display: none;
-}
-
-#mobile-nav a{
-  margin: 30px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #333333;
+  a{
+    margin: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333333;
+    cursor: pointer;
+  }
 }
 
 #mobile-links {
   display: none;
+  text-align: center;
+  background-color: white;
+  margin: 0 40px 40px 40px;
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  a{
+    display: block;
+    text-decoration: none;
+    color: #333333;
+    text-transform: uppercase;
+    padding-top: 10px;
+  }
 }
 
 
 #navigation {
   text-align: center;
-  margin: 40px;
+  margin: 40px 0px 40px 0px;
   font-size: 11px;
   background-color: white;
   line-height: 25px;
   letter-spacing: 1px;
+  a{
+    margin: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+  }
+  a:hover{
+    color: #11b29e;
+  }
 }
 
-#navigation a{
-  margin: 30px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: black;
-}
 
-#navigation a:hover{
-  color: #11b29e;
-}
-
-@media (max-width: 960px) {
+@media (max-width: 768px) {
   #navigation {
     display: none;
   }
   #mobile-nav {
     display: block;
-    margin: 40px 40px 0px 40px;
+    margin: 20px 40px 0px 40px;
   }
 
   #mobile-links {
@@ -88,15 +101,12 @@
     font-size: 11px;
     line-height: 25px;
     letter-spacing: 1px;
+    a{
+      display: block;
+      text-decoration: none;
+      color: #333333;
+      text-transform: uppercase;
+      padding-top: 10px;
+    }
   }
-
-  #mobile-links a{
-    display: block;
-    text-decoration: none;
-    color: #333333;
-    text-transform: uppercase;
-    padding-top: 10px;
-  }
-
-
 }

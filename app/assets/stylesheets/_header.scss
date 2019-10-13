@@ -94,8 +94,7 @@
     margin: 20px 40px 0px 40px;
   }
 
-  #mobile-links {
-    text-align: center;
+  #mobile-links{
     background-color: white;
     margin: 0 40px 40px 40px;
     font-size: 11px;
@@ -107,6 +106,9 @@
       color: #333333;
       text-transform: uppercase;
       padding-top: 10px;
+    }
+    &.open {
+      display: block;
     }
   }
 }

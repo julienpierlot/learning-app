@@ -15,5 +15,5 @@
 //= require_tree .
 
 function ShowMenu() {
-    document.getElementById("mobile-links").style.display = "block";
+    document.getElementById("mobile-links").classList.toggle("open");
 }

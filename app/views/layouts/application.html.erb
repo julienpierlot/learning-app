@@ -15,6 +15,9 @@
 
   <body>
 
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <div class="container" id="container">
 
       <div class="header" id="header">
@@ -27,16 +30,16 @@
         </div>
           <div class="mobile-links" id="mobile-links">
             <a href="/">Home</a>
-            <%= link_to 'My Blog', controller: 'articles' %>
-            <%= link_to 'My Topics', controller: 'topics' %>
-            <%= link_to 'My Events', controller: 'events' %>
+            <%= link_to 'My Blog', articles_path %>
+            <%= link_to 'My Topics', topics_path %>
+            <%= link_to 'My Events', events_path %>
             <a href="#">About Me</a>
           </div>
         <div class="navigation" id='navigation'>
           <a href="/">Home</a>
-          <%= link_to 'My Blog', controller: 'articles' %>
-          <%= link_to 'My Topics', controller: 'topics' %>
-          <%= link_to 'My Events', controller: 'events' %>
+          <%= link_to 'My Blog', articles_path %>
+          <%= link_to 'My Topics', topics_path %>
+          <%= link_to 'My Events', events_path %>
           <a href="#">About Me</a>
         </div>
       </div>

@@ -1335,3 +1335,230 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 282ms (Views: 272.7ms | ActiveRecord: 4.3ms)
 
 
+  [1m[35m (47.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6443476390892012115)[0m
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20191015075519)
+  [1m[35m (23.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (265.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (25.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (36.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191015075519"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (8.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6443476390892012115)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-10-15 09:56:44 +0200
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 24ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-10-15 09:56:45 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (3.4ms)
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (57.1ms)
+Completed 401 Unauthorized in 585ms (ActiveRecord: 9.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"devise/articles"}):
+    30:         </div>
+    31:           <div class="mobile-links" id="mobile-links">
+    32:             <a href="/">Home</a>
+    33:             <%= link_to 'My Blog', controller: 'articles' %>
+    34:             <%= link_to 'My Topics', controller: 'topics' %>
+    35:             <%= link_to 'My Events', controller: 'events' %>
+    36:             <a href="#">About Me</a>
+  
+app/views/layouts/application.html.erb:33:in `_app_views_layouts_application_html_erb__1604029783057699317_70332249975440'
+Started GET "/users/sign_in" for ::1 at 2019-10-15 09:57:50 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (8.7ms)
+Completed 401 Unauthorized in 93ms (ActiveRecord: 7.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"devise/articles"}):
+    30:         </div>
+    31:           <div class="mobile-links" id="mobile-links">
+    32:             <a href="/">Home</a>
+    33:             <%= link_to 'My Blog', controller: 'articles' %>
+    34:             <%= link_to 'My Topics', controller: 'topics' %>
+    35:             <%= link_to 'My Events', controller: 'events' %>
+    36:             <a href="#">About Me</a>
+  
+app/views/layouts/application.html.erb:33:in `_app_views_layouts_application_html_erb__1604029783057699317_70332281906480'
+Started GET "/users/sign_in" for ::1 at 2019-10-15 09:58:09 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (9.4ms)
+Completed 401 Unauthorized in 102ms (ActiveRecord: 12.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"devise/articles"}):
+    30:         </div>
+    31:           <div class="mobile-links" id="mobile-links">
+    32:             <a href="/">Home</a>
+    33:             <%= link_to 'My Blog', controller: 'articles' %>
+    34:             <%= link_to 'My Topics', controller: 'topics' %>
+    35:             <%= link_to 'My Events', controller: 'events' %>
+    36:             <a href="#">About Me</a>
+  
+app/views/layouts/application.html.erb:33:in `_app_views_layouts_application_html_erb__1604029783057699317_70332257756320'
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2019-10-15 10:04:22 +0200
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 23ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-10-15 10:04:22 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (2.4ms)
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (41.6ms)
+Completed 401 Unauthorized in 444ms (ActiveRecord: 9.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"devise/articles"}):
+    30:         </div>
+    31:           <div class="mobile-links" id="mobile-links">
+    32:             <a href="/">Home</a>
+    33:             <%= link_to 'My Blog', controller: 'articles' %>
+    34:             <%= link_to 'My Topics', controller: 'topics' %>
+    35:             <%= link_to 'My Events', controller: 'events' %>
+    36:             <a href="#">About Me</a>
+  
+app/views/layouts/application.html.erb:33:in `_app_views_layouts_application_html_erb___1728128333595995081_70164111270640'
+Started GET "/users/sign_up" for ::1 at 2019-10-15 10:04:31 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (2.6ms)
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (9.8ms)
+Completed 401 Unauthorized in 129ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"devise/articles"}):
+    30:         </div>
+    31:           <div class="mobile-links" id="mobile-links">
+    32:             <a href="/">Home</a>
+    33:             <%= link_to 'My Blog', controller: 'articles' %>
+    34:             <%= link_to 'My Topics', controller: 'topics' %>
+    35:             <%= link_to 'My Events', controller: 'events' %>
+    36:             <a href="#">About Me</a>
+  
+app/views/layouts/application.html.erb:33:in `_app_views_layouts_application_html_erb___1728128333595995081_70164148577000'
+Started GET "/users/sign_up" for ::1 at 2019-10-15 10:05:06 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (7.5ms)
+Completed 401 Unauthorized in 71ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"devise/topics"}):
+    31:           <div class="mobile-links" id="mobile-links">
+    32:             <a href="/">Home</a>
+    33:             <%# <%= link_to 'My Blog', controller: 'articles' %> %>
+    34:             <%= link_to 'My Topics', controller: 'topics' %>
+    35:             <%= link_to 'My Events', controller: 'events' %>
+    36:             <a href="#">About Me</a>
+    37:           </div>
+  
+app/views/layouts/application.html.erb:34:in `_app_views_layouts_application_html_erb___1728128333595995081_70164119313660'
+Started GET "/users/sign_up" for ::1 at 2019-10-15 10:06:46 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 82ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-10-15 10:07:20 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 70ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-10-15 10:07:22 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-10-15 10:09:14 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 225ms (Views: 162.3ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/" for ::1 at 2019-10-15 10:09:17 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArticle Load (128.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[35m (26.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 2]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered welcome/index.html.erb within layouts/application (254.6ms)
+Completed 200 OK in 302ms (Views: 125.2ms | ActiveRecord: 169.7ms)
+
+
+Started GET "/events" for ::1 at 2019-10-15 10:09:23 +0200
+  
+SyntaxError (/Users/jpierlot/learning-app/app/controllers/events_controller.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+ction :authenticate_user! only: [:new, :create]
+                              ^):
+  
+app/controllers/events_controller.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/events" for ::1 at 2019-10-15 10:09:34 +0200
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (42.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 96ms (Views: 39.3ms | ActiveRecord: 47.4ms)
+
+
+Started GET "/events/new" for ::1 at 2019-10-15 10:09:39 +0200
+Processing by EventsController#new as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-10-15 10:09:39 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /Users/jpierlot/.rvm/gems/ruby-2.4.1/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 76ms (Views: 54.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/events/new" for ::1 at 2019-10-15 10:13:08 +0200
+Processing by EventsController#new as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-10-15 10:13:08 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+

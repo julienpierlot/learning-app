@@ -5,7 +5,7 @@
   <% Article.last(3).each do |article|%>
     <div class="article-featured">
       <span class="date-featured"><%= article.created_at.strftime("%d %b. %Y")%></span>
-      <%= image_tag "ace.jpeg" %>
+      <img src="https://picsum.photos/300/200">
       <h3><%= link_to article.title, article %></h3>
       <p><%= article.text%></p>
       <p>Comments: <span class = "comment-count" id="comment-count"><%= article.comments.count%></span></p>
@@ -37,7 +37,7 @@
     <h2>Popular articles</h2>
     <% Article.last(3).each do |article|%>
       <div class="article-sidebar">
-        <%= image_tag "ace.jpeg" %>
+        <img src="https://picsum.photos/300/200">
         <h3><%= link_to article.title, article %></h3>
         <% if article.text.length > 100 %>
           <p><%= article.text.first(100)+"..."%></p>

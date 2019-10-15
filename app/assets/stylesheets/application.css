@@ -27,6 +27,24 @@ body{
   font-weight: lighter;
 }
 
+.notice {
+  background: black;
+  position: fixed;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 0px;
+}
+
+.alert {
+  background: black;
+  position: fixed;
+  color: red;
+  text-align: center;
+  padding: 10px;
+  margin: 0px;
+}
+
 #container {
   max-width: 960px;
   margin:0px auto;

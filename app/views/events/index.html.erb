@@ -1,4 +1,4 @@
-<h1>My Events</h1>
+<h1>Events</h1>
 
 <table>
   <tr>
@@ -18,7 +18,7 @@
       <% if event.participants.any?  %>
         <td><%= event.participants.map(&:email) %></td>
       <% else %>
-        <td>Aucun participant pour le moment</td>   
+        <td>Aucun participant pour le moment</td>
       <% end %>
       <td><%= link_to 'Show', event_path(event) %></td>
       <td><%= link_to 'Edit', edit_event_path(event) %></td>

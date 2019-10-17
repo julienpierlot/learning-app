@@ -1,17 +1,35 @@
 
 
 <div class="main-column" id="main-column">
-  <h2>Latest articles</h2>
-  <% Article.last(3).each do |article|%>
-    <div class="article-featured">
-      <span class="date-featured"><%= article.created_at.strftime("%d %b. %Y")%></span>
-      <img src="https://picsum.photos/300/200">
-      <h3><%= link_to article.title, article %></h3>
-      <p><%= article.text%></p>
-      <p>Comments: <span class = "comment-count" id="comment-count"><%= article.comments.count%></span></p>
-    </div>
-  <% end %>
+  <div class="articles">
+    <h2>Latest articles</h2>
+    <% Article.last(3).each do |article|%>
+      <div class="article-featured">
+        <span class="date-featured"><%= article.created_at.strftime("%d %b. %Y")%></span>
+        <img src="https://picsum.photos/300/200">
+        <h3><%= link_to article.title, article %></h3>
+        <p><%= article.text%></p>
+        <p>Comments: <span class = "comment-count" id="comment-count"><%= article.comments.count%></span></p>
+      </div>
+    <% end %>
+  </div>
 
+  <div class="events">
+    <%if current_user.events%>
+      <h2>My events</h2>
+      <% current_user.events.last(3).each do |event|%>
+        <div class="event-featured">
+          <%= image_tag "contest.png" %>
+          <h3><%= link_to event.name, event %></h3>
+          <ul>
+            <li><%= event.date %></li>
+            <li><%= event.budget %></li>
+            <li><%= event.location %></li>
+          </ul>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
 
 <div class="sidebar" id="sidebar">

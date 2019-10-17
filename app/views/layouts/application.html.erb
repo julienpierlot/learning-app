@@ -34,29 +34,30 @@
         </div>
           <div class="mobile-links" id="mobile-links">
             <%= link_to 'Home', root_path %>
-            <%= link_to 'My Blog', articles_path %>
-            <%= link_to 'My Topics', topics_path %>
-            <%= link_to 'My Events', events_path %>
+            <%= link_to 'Blog', articles_path %>
+            <%= link_to 'Topics', topics_path %>
+            <%= link_to 'Events', events_path %>
             <a href="#">About Me</a>
           </div>
         <div class="navigation" id='navigation'>
           <%= link_to 'Home', root_path %>
-          <%= link_to 'My Blog', articles_path %>
-          <%= link_to 'My Topics', topics_path %>
-          <%= link_to 'My Events', events_path %>
+          <%= link_to 'Blog', articles_path %>
+          <%= link_to 'Topics', topics_path %>
+          <%= link_to 'Events', events_path %>
           <a href="#">About Me</a>
         </div>
 
-        <div class="login" id="login">
-          <% if user_signed_in? %>
-            <p><%= current_user.email.split("@").first %></p>
-            <%= link_to((image_tag "signout.png"), destroy_user_session_path, :method => :delete) %>
-          <% else %>
-            <%= link_to (image_tag "login.png"), new_user_session_path %>
-          <% end %>
-        </div>
+        <div class="avatar" id="avatar">
 
-      </div>
+            <% if user_signed_in? %>
+              <%= image_tag "ace_welcome.jpeg", :class => 'avatar-picture' %>
+              <p><%= current_user.email.split("@").first %></p>
+              <%= link_to((image_tag "signout.png", :class => 'avatar-logout'), destroy_user_session_path, :method => :delete) %>
+            <% else %>
+              <%= link_to (image_tag "login.png", :class => 'avatar-login'), new_user_session_path %>
+            <% end %>
+            
+        </div>
 
         <%= yield %>
 

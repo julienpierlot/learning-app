@@ -84,11 +84,21 @@
   }
 }
 
-#login {
-  height: 40px;
+#avatar {
+  border: 1px red solid;
+  height: auto;
   text-align: center;
   padding: 10px;
-  img {
+  position: relative;
+  .avatar-picture {
+    border-radius: 50%;
+    height: 60px;
+  }
+  .avatar-logout{
+    max-width: 100%;
+    max-height: 40px;
+  }
+  .avatar-login{
     max-width: 100%;
     max-height: 40px;
   }

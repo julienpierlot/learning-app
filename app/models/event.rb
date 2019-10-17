@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
   has_many :participants, dependent: :destroy
+  belongs_to :user
   validates :name, :budget, :location, :date, presence: true
 
   def add_participant(emails)
@@ -9,9 +10,6 @@ class Event < ApplicationRecord
       emails_already_assigned << receiver
       self.participants << Participant.new(email: email, receiver: receiver)
     end
-  end
-
-  def self.cooc
   end
 
 end

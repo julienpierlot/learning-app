@@ -1,0 +1,8 @@
+<h1>Participant details</h1>
+<p>Your Email: <%= @participant.email %></p>
+<p>Your secret receiver: <%= @participant.receiver %></p>
+<p>Event name: <%= @participant.event.name %></p>
+<p>Event date: <%= @participant.event.date %></p>
+<p><%= link_to "link", participant_url(token: "blabla") %></p>
+
+<%=(link_to 'Sign up', new_user_registration_path) if !user_signed_in?%>

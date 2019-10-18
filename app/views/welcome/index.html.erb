@@ -15,7 +15,7 @@
   </div>
 
   <div class="events">
-    <%if current_user.events%>
+    <%if user_signed_in? && current_user.events%>
       <h2>My events</h2>
       <% current_user.events.last(3).each do |event|%>
         <div class="event-featured">

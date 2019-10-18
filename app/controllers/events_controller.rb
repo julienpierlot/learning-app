@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :show, :edit]
 
   def index
     @events = Event.all
@@ -11,8 +11,9 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    _participants = @event.add_participant(params[:email])
-      if @event.save
+    _participants = @event.add_participant(params.fetch("email").split( /, */ ))
+    @event.user = current_user
+      if @event.save!
         redirect_to @event
       else
         render 'new'

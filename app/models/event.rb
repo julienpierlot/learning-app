@@ -3,8 +3,6 @@ class Event < ApplicationRecord
   belongs_to :user
   validates :name, :budget, :location, :date, presence: true
 
-  def
-
   def add_participant(emails)
     emails_already_assigned = []
     emails.each do |email|

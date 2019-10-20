@@ -1,6 +1,6 @@
 class Participant < ApplicationRecord
   belongs_to :event
-  validates :email, :receiver, presence: true
+  validates :email, :receiver, :email_token, presence: true
 
   def generate_token
    begin

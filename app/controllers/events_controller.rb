@@ -11,9 +11,12 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    _participants = @event.add_participant(params.fetch("email").split( /, */ ))
+    _participants = @event.add_participant(params["email"].split( /, */ ))
     @event.user = current_user
       if @event.save!
+        @event.participants.each do |participant|
+          EventMailer.participant_email(participant).deliver
+        end
         redirect_to @event
       else
         render 'new'
@@ -27,10 +30,8 @@ class EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-
     redirect_to events_path
   end
-
 
   def edit
     @event = Event.find(params[:id])

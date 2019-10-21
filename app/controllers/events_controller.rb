@@ -14,9 +14,6 @@ class EventsController < ApplicationController
     _participants = @event.add_participant(params["email"].split( /, */ ))
     @event.user = current_user
       if @event.save!
-        @event.participants.each do |participant|
-          EventMailer.participant_email(participant).deliver
-        end
         redirect_to @event
       else
         render 'new'

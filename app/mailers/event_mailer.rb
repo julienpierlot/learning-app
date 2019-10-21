@@ -3,7 +3,7 @@ class EventMailer < ApplicationMailer
 
   def participant_email(participant)
     @participant = participant
-     @url = "#{url_for @participant}" + "?token=#{@participant.email_token}"
+    @url = "#{url_for @participant}" + "?token=#{@participant.email_token}"
     mail(to: @participant.email, subject: "Guess who's your receiver?")
   end
 

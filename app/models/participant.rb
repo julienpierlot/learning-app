@@ -4,9 +4,9 @@ class Participant < ApplicationRecord
 
   def self.generate_token
    begin
-    self.email_token = loop do
-      random_token = SecureRandom.urlsafe_base64(nil, false)
-      break random_token unless self.class.exists?(email_token: random_token)
+     email_token = loop do
+       random_token = SecureRandom.urlsafe_base64(nil, false)
+       break random_token unless self.exists?(email_token: random_token)
     end
    end
   end

@@ -50,13 +50,13 @@
         <div class="avatar" id="avatar">
 
             <% if user_signed_in? %>
-              <%= image_tag "ace_welcome.jpeg", :class => 'avatar-picture' %>
+              <%= image_tag "ace_welcome.jpg", :class => 'avatar-picture' %>
               <p><%= current_user.email.split("@").first %></p>
               <%= link_to((image_tag "signout.png", :class => 'avatar-logout'), destroy_user_session_path, :method => :delete) %>
             <% else %>
               <%= link_to (image_tag "login.png", :class => 'avatar-login'), new_user_session_path %>
             <% end %>
-            
+
         </div>
 
         <%= yield %>

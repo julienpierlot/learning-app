@@ -14,6 +14,10 @@
 //= require turbolinks
 //= require_tree .
 
+// = require jquery3
+// = require popper
+// = require bootstrap-sprockets
+
 function ShowMenu() {
     document.getElementById("mobile-links").classList.toggle("open");
 }

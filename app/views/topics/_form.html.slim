@@ -1,0 +1,11 @@
+= form_with scope: :topic, url: topics_path, local: true do |form|
+  p
+    = form.label :title
+    br
+    = form.text_field :title
+  p
+    = form.label :message
+    br
+    = form.text_area :message
+  p
+    = form.submit

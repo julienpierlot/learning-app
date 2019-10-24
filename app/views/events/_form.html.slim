@@ -1,0 +1,24 @@
+= form_with scope: :event, url: events_path, local: true do |form|
+  h2
+    | Event details
+  p
+    = form.label :name
+    br
+    = form.text_field :name
+  p
+    = form.label :date
+    br
+    = form.date_field :date
+  p
+    = form.label :location
+    br
+    = form.text_field :location
+  p
+    = form.label :budget
+    br
+    = form.text_field :budget
+  h2
+    | Add participants
+  = text_area_tag 'email'
+  p
+    = form.submit

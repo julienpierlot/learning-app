@@ -4,8 +4,10 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+gem 'slim'
 gem 'dotenv-rails', groups: [:development, :test]
-
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
 gem 'sendgrid-ruby'
 gem 'awesome_print'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

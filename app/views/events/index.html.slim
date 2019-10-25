@@ -24,7 +24,7 @@ table
         = event.budget
       - if event.participants.any?
         td
-          = event.participants.map(&:email)
+          = event.participants.count
       - else
         td
           | Aucun participant pour le moment

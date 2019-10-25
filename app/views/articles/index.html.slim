@@ -1,23 +1,19 @@
-h1
+h1.articles-title
   | Articles
-table
-  tr
-    th
-      | Title
-    th
-      | Text
-    th
-  - @articles.each do |article|
-    tr
-      td
-        = article.title
-      td
-        = article.text
-      td
-        = link_to 'Show', article_path(article)
-      td
-        = link_to 'Edit', edit_article_path(article)
-      td
-        = link_to 'Destroy', article_path(article), :method => :delete, :data => {:confirm => 'Are you sure?'}
-  = link_to 'New article', new_article_path
+
+= link_to 'New article', new_article_path, class: "article-new-link"
+
+- @articles.each do |article|
+  .article-featured
+    span.date-featured
+      = article.created_at.strftime("%d %b. %Y")
+    img[src="https://picsum.photos/300/200"]
+    h3
+      = link_to article.title, article
+    p
+      = article.text
+    p
+      | Comments: 
+      span#comment-count.comment-count
+        = article.comments.count
 = link_to 'Back', :back

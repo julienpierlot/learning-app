@@ -1,19 +1,19 @@
 h1
   | Event details
 p
-  | Created-by: 
+  | Created-by:
   = @event.user.email.split('@').first
 p
-  | Name: 
+  | Name:
   = @event.name
 p
-  | Date: 
+  | Date:
   = @event.date
 p
-  | Location: 
+  | Location:
   = @event.location
 p
-  | Budget: 
+  | Budget:
   = @event.budget
 - if @event.participants.any?
   p
@@ -21,10 +21,12 @@ p
   ul
     - @event.participants.each  do |participant|
       li
-        | Email: 
-        = participant.email
-        |  | Receiver: 
-        = participant.receiver
+        | Name:
+        = participant.email.split("@").first
+        - if participant.receiver.present?
+          | Receiver:
+          = participant.receiver.split("@").first
+
   ul
 
 = link_to 'Back', events_path

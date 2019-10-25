@@ -16,7 +16,7 @@
           p
             = article.text
         p
-          | Comments: 
+          | Comments:
           span#comment-count.comment-count
             = article.comments.count
   .events
@@ -25,16 +25,17 @@
         | My events
       - current_user.events.last(3).each do |event|
         .event-featured
-          = image_tag "contest.png"
-          h3
+          h3.event-title
             = link_to event.name, event
-          ul
-            li
-              = event.date
-            li
-              = event.budget
-            li
-              = event.location
+          p
+            = event.date
+            |
+             | budget:
+            = event.budget
+            |
+             | location:
+            = event.location
+
 #sidebar.sidebar
   #welcome-image.welcome-image
     = image_tag "ace_welcome.jpg"
@@ -48,7 +49,7 @@
       | Search this app
     = form_with scope: :article, url: articles_path, local: true do |form|
       = text_area_tag 'keywords'
-      = form.submit
+      = form.submit 'Search', class: 'form-submit'
   #popular-articles.popular-articles
     h2
       | Popular articles

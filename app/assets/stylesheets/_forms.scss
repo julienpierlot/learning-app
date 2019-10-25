@@ -54,4 +54,15 @@ h1.form-title {
     font-size: 15px;
     border: none;
   }
+
+  .form-submit:hover {
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
+  }
+
+  #user_remember_me {
+    width: 10%;
+    display: inline;
+  }
 }

@@ -3,9 +3,9 @@ html
   head
     meta[content="text/html; charset=UTF-8" http-equiv="Content-Type"]
   body
-    h1
+    h1.title
       | Hi
       = @participant.email
     p
-      | You have been added to the event "#{@participant.event.name}". Click on this link to check it out: 
+      | You have been added to the event "#{@participant.event.name}". Click on this link to check it out:
       = link_to "link", @url

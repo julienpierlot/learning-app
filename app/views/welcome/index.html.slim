@@ -1,4 +1,5 @@
 #main-column.main-column
+
   .articles
     h2
       | Latest articles
@@ -16,9 +17,10 @@
           p
             = article.text
         p
-          | Comments:
+          | Comments:&nbsp;
           span#comment-count.comment-count
             = article.comments.count
+
   .events
     - if user_signed_in? && current_user.events.present?
       h2
@@ -27,16 +29,23 @@
         .event-featured
           h3.event-title
             = link_to event.name, event
-          p
-            = event.date
-            |
-             | budget:
-            = event.budget
-            |
-             | location:
-            = event.location
+          ul
+            li
+              | Date: 
+              = event.date
+            li
+              | Location: 
+              = event.location
+            li
+              | Budget: 
+              = event.budget
+            li
+              - if event.participants.any?
+                  | Number of participants: 
+                  = event.participants.count
 
 #sidebar.sidebar
+
   #welcome-image.welcome-image
     = image_tag "ace_welcome.jpg"
   #welcome-text.welcome-text
@@ -44,12 +53,14 @@
       | Welcome!
     p
       | My name is Julien and my life is all about coding now.
+
   #search-app.search-app
     h2
       | Search this app
-    = form_with scope: :article, url: articles_path, local: true do |form|
+    form.form
       = text_area_tag 'keywords'
-      = form.submit 'Search', class: 'form-submit'
+      input.form-submit[type="submit", value="Search"]
+
   #popular-articles.popular-articles
     h2
       | Popular articles

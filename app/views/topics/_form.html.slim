@@ -1,11 +1,8 @@
-= form_with scope: :topic, url: topics_path, local: true do |form|
-  p
-    = form.label :title
-    br
-    = form.text_field :title
-  p
+= form_with scope: :topic, url: topics_path, class: "form", local: true do |form|
+
+    = form.text_field :title, placeholder: "Title"
+
     = form.label :message
-    br
     = form.text_area :message
-  p
-    = form.submit
+
+    = form.submit "Submit", class: 'form-submit'

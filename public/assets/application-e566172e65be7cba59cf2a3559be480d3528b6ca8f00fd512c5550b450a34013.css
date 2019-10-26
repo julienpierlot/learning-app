@@ -1,0 +1,477 @@
+/* line 1, /Users/julienjp/learning-app/app/assets/stylesheets/_forms.scss */
+h1.form-title {
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+/* line 8, /Users/julienjp/learning-app/app/assets/stylesheets/_forms.scss */
+.form h1 {
+  text-align: center;
+}
+/* line 12, /Users/julienjp/learning-app/app/assets/stylesheets/_forms.scss */
+.form input {
+  display: block;
+  width: 100%;
+  height: 20px;
+  box-sizing: border-box;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px #333333 solid;
+  margin: 20px 0 20px 0;
+  font-size: 15px;
+  color: #333333;
+  outline: none;
+}
+/* line 26, /Users/julienjp/learning-app/app/assets/stylesheets/_forms.scss */
+.form input:hover {
+  border-bottom: 1px #11b29e solid;
+  color: #11b29e;
+}
+/* line 31, /Users/julienjp/learning-app/app/assets/stylesheets/_forms.scss */
+.form textarea {
+  display: block;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px #333333 solid;
+  color: #333333;
+  outline: none;
+}
+/* line 42, /Users/julienjp/learning-app/app/assets/stylesheets/_forms.scss */
+.form textarea:hover {
+  border: 1px #11b29e solid;
+}
+/* line 46, /Users/julienjp/learning-app/app/assets/stylesheets/_forms.scss */
+.form .form-submit {
+  margin: 20px auto;
+  width: 200px;
+  height: 35px;
+  background: #11b29e;
+  color: white;
+  font-family: "Josefin Sans", sans-serif, "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  border: none;
+}
+/* line 58, /Users/julienjp/learning-app/app/assets/stylesheets/_forms.scss */
+.form .form-submit:hover {
+  background-color: #333333;
+  color: white;
+  cursor: pointer;
+}
+/* line 64, /Users/julienjp/learning-app/app/assets/stylesheets/_forms.scss */
+.form #user_remember_me {
+  width: 10%;
+  display: inline;
+}
+/* line 1, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#header {
+  width: 94%;
+  padding: 3%;
+}
+
+/* line 6, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#home-title {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+/* line 10, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#home-title h1 {
+  font: 65px, cursive;
+  margin: 0px;
+  font-family: Staatliches, cursive;
+}
+/* line 15, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#home-title a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 50px;
+}
+/* line 20, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#home-title h1:after {
+  content: " --- ";
+  display: block;
+  color: #11b29e;
+  line-height: 25px;
+  font-size: 40px;
+}
+/* line 27, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#home-title span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+/* line 34, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#mobile-nav {
+  text-align: center;
+  margin: 40px;
+  font-size: 11px;
+  background-color: grey;
+  line-height: 25px;
+  letter-spacing: 1px;
+  display: none;
+}
+/* line 42, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#mobile-nav a {
+  margin: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333333;
+  cursor: pointer;
+}
+
+/* line 51, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#mobile-links {
+  display: none;
+  text-align: center;
+  background-color: white;
+  margin: 0 40px 40px 40px;
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+/* line 59, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#mobile-links a {
+  display: block;
+  text-decoration: none;
+  color: #333333;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+/* line 69, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#navigation {
+  text-align: center;
+  margin: 40px 0px 20px 0px;
+  font-size: 11px;
+  background-color: white;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+/* line 76, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#navigation a {
+  margin: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+/* line 82, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#navigation a:hover {
+  color: #11b29e;
+}
+
+/* line 87, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#avatar {
+  height: auto;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+/* line 92, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#avatar .avatar-picture {
+  border-radius: 50%;
+  height: 60px;
+}
+/* line 96, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#avatar .avatar-logout {
+  max-width: 100%;
+  max-height: 20px;
+}
+/* line 100, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+#avatar .avatar-login {
+  max-width: 100%;
+  max-height: 40px;
+}
+
+@media (max-width: 768px) {
+  /* line 107, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+  #navigation {
+    display: none;
+  }
+
+  /* line 110, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+  #mobile-nav {
+    display: block;
+    margin: 20px 40px 20px 40px;
+  }
+
+  /* line 115, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+  #mobile-links {
+    background-color: white;
+    margin: 0 40px 40px 40px;
+    font-size: 11px;
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+  /* line 121, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+  #mobile-links a {
+    display: block;
+    text-decoration: none;
+    color: #333333;
+    text-transform: uppercase;
+    padding-top: 10px;
+  }
+  /* line 128, /Users/julienjp/learning-app/app/assets/stylesheets/_header.scss */
+  #mobile-links.open {
+    display: block;
+  }
+}
+/* line 5, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#main-column {
+  padding: 3%;
+  float: left;
+  width: 64%;
+  border-right: 1px solid #EEEEEE;
+  overflow: hidden;
+}
+
+/* line 13, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+.article-featured {
+  margin-bottom: 40px;
+}
+/* line 15, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+.article-featured a {
+  text-decoration: none;
+  color: #333333;
+}
+/* line 19, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+.article-featured a:hover {
+  color: #11b29e;
+}
+/* line 22, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+.article-featured span {
+  color: #11b29e;
+  display: block;
+}
+/* line 26, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+.article-featured #comment-count {
+  display: inline;
+}
+/* line 29, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+.article-featured h3 {
+  font-weight: lighter;
+  font-size: 25px;
+}
+/* line 33, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+.article-featured img {
+  width: 30%;
+  float: left;
+  margin: 25px 15px 15px 0px;
+}
+/* line 38, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+.article-featured p {
+  margin-top: 0px;
+}
+
+/* line 44, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+.event-featured img {
+  max-width: 40px;
+}
+/* line 47, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+.event-featured a {
+  text-decoration: none;
+  color: #333333;
+}
+/* line 51, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+.event-featured a:hover {
+  color: #11b29e;
+}
+/* line 54, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+.event-featured h3 {
+  font-weight: lighter;
+  font-size: 25px;
+  display: inline-block;
+}
+/* line 59, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+.event-featured .event-title {
+  margin: 0;
+}
+
+/* line 64, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#main-column .article--featured .comment-number p span {
+  display: inline;
+}
+
+/* line 68, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#sidebar {
+  padding: 3%;
+  text-align: left;
+  float: left;
+  width: 23%;
+  font-size: 15px;
+}
+/* line 74, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#sidebar div {
+  border-bottom: 1px solid #EEEEEE;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0px;
+}
+/* line 80, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#sidebar .article-sidebar {
+  border: none;
+  padding-bottom: 10px;
+  padding-top: 0px;
+}
+/* line 85, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#sidebar h2 {
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-family: Staatliches, cursive;
+}
+/* line 91, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#sidebar img {
+  width: 100%;
+}
+/* line 94, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#sidebar #welcome-image {
+  text-align: center;
+}
+/* line 96, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#sidebar #welcome-image img {
+  border-radius: 50%;
+  width: auto;
+  max-width: 75%;
+  height: auto;
+  max-height: 75%;
+}
+
+@media (max-width: 768px) {
+  /* line 107, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+  #main-column {
+    width: 94%;
+    padding: 3%;
+  }
+
+  /* line 111, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+  #sidebar {
+    text-align: center;
+    float: none;
+    width: 94%;
+    padding: 3%;
+  }
+  /* line 117, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+  #sidebar #welcome-image img {
+    border-radius: 50%;
+    width: auto;
+    max-width: 25%;
+    height: auto;
+    max-height: 25%;
+  }
+}
+/* line 129, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#popular-articles img {
+  float: left;
+  width: 49%;
+  padding-right: 10px;
+  max-width: 100px;
+  height: auto;
+  max-height: 100px;
+}
+/* line 137, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#popular-articles h3 {
+  padding-right: 10px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+/* line 143, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#popular-articles p {
+  margin: 0px;
+}
+/* line 146, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#popular-articles a {
+  text-decoration: none;
+  color: #11b29e;
+}
+/* line 150, /Users/julienjp/learning-app/app/assets/stylesheets/welcome.scss */
+#popular-articles a:hover {
+  color: #333333;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 21, /Users/julienjp/learning-app/app/assets/stylesheets/application.scss */
+body {
+  background-image: url(https://www.designerblogs.com/wp-content/uploads/2019/03/gabrielle-2019-v1.png);
+  font-family: "Josefin Sans", sans-serif, "Open Sans", sans-serif;
+  font-size: 18px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  color: #333333;
+  /* font: 26px 'Josefin Sans', sans-serif; */
+  font-weight: lighter;
+}
+
+/* line 32, /Users/julienjp/learning-app/app/assets/stylesheets/application.scss */
+a {
+  color: #11b29e;
+}
+
+/* line 36, /Users/julienjp/learning-app/app/assets/stylesheets/application.scss */
+.notice {
+  background: black;
+  position: fixed;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 0px;
+}
+
+/* line 45, /Users/julienjp/learning-app/app/assets/stylesheets/application.scss */
+.alert {
+  background: black;
+  position: fixed;
+  color: red;
+  text-align: center;
+  padding: 10px;
+  margin: 0px;
+}
+
+/* line 54, /Users/julienjp/learning-app/app/assets/stylesheets/application.scss */
+.new-link {
+  margin-bottom: 30px;
+  display: block;
+}
+
+/* line 59, /Users/julienjp/learning-app/app/assets/stylesheets/application.scss */
+#container {
+  max-width: 960px;
+  margin: 0px auto;
+}
+
+@media (max-width: 768px) {
+  /* line 65, /Users/julienjp/learning-app/app/assets/stylesheets/application.scss */
+  #container {
+    width: 100%;
+  }
+}
+/* line 70, /Users/julienjp/learning-app/app/assets/stylesheets/application.scss */
+#footer {
+  clear: both;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 20px;
+}
+
+/* line 78, /Users/julienjp/learning-app/app/assets/stylesheets/application.scss */
+#name {
+  color: #11b29e;
+}
